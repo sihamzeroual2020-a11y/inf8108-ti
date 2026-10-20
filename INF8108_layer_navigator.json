@@ -2,28 +2,23 @@
   "name": "INF8108 - Secteur Sante - Priorites",
   "versions": { "attack": "16", "navigator": "5.1", "layer": "4.5" },
   "domain": "enterprise-attack",
-  "description": "TTPs observes dans le secteur sante - campagnes HNDL / JADEPUFFER (Storm-3168) / UNC6508 / Medusa / IoMT",
+  "description": "TTPs observes dans le secteur sante, campagne HNDL/JADEPUFFER/UNC6508/Medusa/IoMT",
   "gradient": { "colors": ["#8fbc8f", "#ffd966", "#e06666"], "minValue": 1, "maxValue": 3 },
-  "hideDisabled": true,
-  "sorting": 3,
-  "showScores": true,
-  "showLegend": true,
-  "showTacticRowBackground": true,
-  "tacticRowBackground": "#dddddd",
-  "selectTechniquesAcrossTactics": true,
-  "metadata": [
-    { "name": "Auteurs", "value": "Zeroual / Cabrera / Takouche Guinete / Ndjike Tatchoua" },
-    { "name": "Cours", "value": "INF8108 - Automne 2026" },
-    { "name": "Echelle", "value": "1 = moyen, 2 = eleve, 3 = critique" },
-    { "name": "Sources", "value": "Sysdig TRT, Google Threat Intelligence Group, Microsoft Security, CCCS" }
-  ],
   "techniques": [
-    { "techniqueID": "T1190",    "score": 3, "comment": "Langflow CVE-2025-3248, REDCap legacy, services exposes" },
-    { "techniqueID": "T1486",    "score": 3, "comment": "ENCFORGE .locked, Medusa .MEDUSA" },
-    { "techniqueID": "T1078",    "score": 3, "comment": "Comptes root MySQL, service principals Azure, domain admin" },
+    { "techniqueID": "T1190",   "score": 3, "comment": "Langflow CVE-2025-3248, REDCap legacy, services exposes" },
+    { "techniqueID": "T1486",   "score": 3, "comment": "ENCFORGE .locked, Medusa .MEDUSA" },
+    { "techniqueID": "T1078",   "score": 3, "comment": "Comptes root MySQL, service principals Azure, domain admin" },
     { "techniqueID": "T1505.003","score": 3, "comment": "help.php sur REDCap" },
-    { "techniqueID": "T1554",    "score": 3, "comment": "INFINITERED survit aux upgrades REDCap" },
+    { "techniqueID": "T1554",   "score": 3, "comment": "INFINITERED survit aux upgrades REDCap" },
     { "techniqueID": "T1114.003","score": 2, "comment": "Regle Patroit, BCC silencieux" },
     { "techniqueID": "T1552.001","score": 2, "comment": "credentials.json et .env sur MinIO par defaut" },
-    { "techniqueID": "T1611",    "score": 2, "comment": "Evasion de conteneur Docker" },
-    { "techniqueID": "T1053.003","
+    { "techniqueID": "T1611",   "score": 2, "comment": "Evasion de conteneur Docker" },
+    { "techniqueID": "T1053.003","score": 2, "comment": "Beacon crontab 30 min" },
+    { "techniqueID": "T1567",   "score": 2, "comment": "Exfiltration Gmail / rclone" },
+    { "techniqueID": "T1090.003","score": 2, "comment": "Routeur ASUS compromis" },
+    { "techniqueID": "T1490",   "score": 2, "comment": "vssadmin et bcdedit" },
+    { "techniqueID": "T1036",   "score": 1, "comment": "Homoglyphe pi-thon, rclone renomme" },
+    { "techniqueID": "T1027",   "score": 1, "comment": "UPX, base64" },
+    { "techniqueID": "T1210",   "score": 1, "comment": "Pivot Langflow vers MySQL/Nacos" }
+  ]
+}
